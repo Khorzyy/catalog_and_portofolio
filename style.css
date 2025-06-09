@@ -6,155 +6,145 @@
   --card-bg: #fff;
 }
 
+/* Font dan reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: #fffaf5;
+  color: #333;
   line-height: 1.6;
 }
 
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 2rem;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  justify-content: space-between;
+  background-color: #b6895b;
+  padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 100;
 }
 
 .navbar h4 {
-  font-size: 1.8rem;
-  font-weight: bold;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 #bers {
-  color: var(--primary);
+  color: #ffe9c9;
 }
 
 nav ul {
+  list-style: none;
   display: flex;
   gap: 1.5rem;
-  list-style: none;
 }
 
 nav ul li a {
+  color: #fff;
   text-decoration: none;
-  color: var(--text);
   font-weight: 500;
-  transition: color 0.3s;
-}
-
-nav ul li a  ::-webkit-search-results-button{
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: var(--primary);
+  color: #ffe9c9;
 }
 
 .btn-company {
-  background-color: var(--primary);
-  color: white;
   padding: 0.5rem 1rem;
+  background-color: #fff;
+  color: #b6895b;
   border: none;
-  border-radius: 999px;
-  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 600;
   transition: background-color 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .btn-company:hover {
-  background-color: #a1724c;
+  background-color: #ffe9c9;
 }
 
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle i {
+  color: #fff;
+  width: 28px;
+  height: 28px;
+}
 
 /* Slideshow */
 .slideshow-container {
-  max-width: 800px;
-  margin: 2rem auto;
-  border-radius: 15px;
-  overflow: hidden;
   position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin: 2rem auto;
+  overflow: hidden;
 }
 
 .slide {
   display: none;
+  width: 100%;
   position: relative;
 }
 
 .slide img {
   width: 100%;
   height: auto;
-  display: block;
+  border-radius: 12px;
 }
 
 .caption {
   position: absolute;
-  bottom: 10%;
+  bottom: 15%;
   left: 5%;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 0.8rem 1.2rem;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 1rem;
   border-radius: 8px;
-  font-size: 1.1rem;
-}
-
-.fade {
-  animation: fade 1.5s ease-in-out;
-}
-
-@keyframes fade {
-  from { opacity: 0.4; }
-  to { opacity: 1; }
+  font-size: 1.2rem;
 }
 
 /* Product Grid */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
 }
 
 .card {
-  background-color: var(--card-bg);
-  border-radius: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.07);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
 }
 
 .card img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
 }
 
 .card-body {
   padding: 1rem;
-  text-align: center;
 }
 
 .card-body h3 {
@@ -162,38 +152,82 @@ nav ul li a:hover {
   margin-bottom: 0.5rem;
 }
 
-.card-body .harga {
-  color: var(--primary);
+.harga {
+  color: #b6895b;
   font-weight: bold;
   margin-bottom: 0.3rem;
 }
 
-.card-body .stok {
-  color: var(--muted);
+.stok {
   font-size: 0.9rem;
+  margin-bottom: 0.8rem;
 }
 
 .buy-btn {
-  margin-top: 1rem;
-  background-color: var(--primary);
+  padding: 0.6rem 1rem;
+  background-color: #b6895b;
   color: #fff;
   border: none;
-  padding: 0.6rem 1.2rem;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
 }
 
 .buy-btn:hover {
-  background-color: #a1724c;
+  background-color: #a0744e;
+}
+
+.buy-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
 /* Footer */
-footer.Pencipta {
+.Pencipta {
   text-align: center;
-  padding: 2rem 1rem;
-  font-size: 1.2rem;
-  background-color: #fff;
-  margin-top: 3rem;
-  border-top: 1px solid #ccc;
+  padding: 1rem;
+  background-color: #b6895b;
+  color: #fff;
+  font-weight: 500;
 }
+
+.Pencipta a {
+  color: #ffe9c9;
+  text-decoration: none;
+}
+
+.Pencipta a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+    background-color: #b6895b;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+  }
