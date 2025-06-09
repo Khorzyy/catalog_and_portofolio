@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIGMA BOY — Digital Strategy Consultant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: "#0f172a",
+            accent: "#3b82f6",
+            slate: "#1e293b"
+          },
+          animation: {
+            fadeIn: 'fadeIn 1.4s ease-out',
+            slideUp: 'slideUp 1.2s ease-out',
+            zoomIn: 'zoomIn 1s ease-in-out'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 }
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(50px)', opacity: 0 },
+              '100%': { transform: 'translateY(0)', opacity: 1 }
+            },
+            zoomIn: {
+              '0%': { transform: 'scale(0.95)', opacity: 0 },
+              '100%': { transform: 'scale(1)', opacity: 1 }
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-primary text-white scroll-smooth font-sans">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 bg-primary z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-accent tracking-wide">SIGMA BOY</h1>
+      <nav class="space-x-6 text-sm font-medium">
+        <a href="#about" class="hover:text-accent transition">Tentang</a>
+        <a href="#services" class="hover:text-accent transition">Layanan</a>
+        <a href="#process" class="hover:text-accent transition">Metodologi</a>
+        <a href="#contact" class="hover:text-accent transition">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d4');">
+    <div class="absolute inset-0 bg-black bg-opacity-75 flex items-center justify-center px-6 text-center">
+      <div class="animate-fadeIn max-w-3xl">
+        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-white drop-shadow-md">
+          Mewujudkan Visi Digital Anda dengan Presisi Strategis
+        </h2>
+        <p class="text-lg text-gray-300 mt-4">Solusi teknologi end-to-end yang dirancang untuk skala, kecepatan, dan keberlanjutan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang -->
+  <section id="about" class="max-w-5xl mx-auto px-6 py-24 animate-slideUp">
+    <h2 class="text-3xl font-bold text-accent mb-6">Tentang SIGMA BOY</h2>
+    <p class="text-lg leading-relaxed text-gray-300">
+      SIGMA BOY adalah firma konsultan teknologi yang didedikasikan untuk membantu perusahaan bertransformasi melalui solusi digital strategis. Kami tidak hanya menawarkan teknologi — kami memformulasi visi, memetakan strategi, dan mengintegrasikan sistem yang berdaya tahan dan berorientasi hasil.
+    </p>
+  </section>
+
+  <!-- Layanan -->
+  <section id="services" class="bg-slate py-24">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-accent mb-12">Layanan Profesional Kami</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-primary border border-slate-700 p-6 rounded-lg shadow-lg hover:scale-105 transition transform duration-300 animate-zoomIn">
+          <h3 class="text-lg font-semibold text-white mb-2">Perumusan Strategi Digital</h3>
+          <p class="text-sm text-gray-400">Analisis menyeluruh dan desain solusi yang selaras dengan kapabilitas dan tujuan bisnis.</p>
+        </div>
+        <div class="bg-primary border border-slate-700 p-6 rounded-lg shadow-lg hover:scale-105 transition transform duration-300 animate-zoomIn">
+          <h3 class="text-lg font-semibold text-white mb-2">Transformasi Sistem</h3>
+          <p class="text-sm text-gray-400">Modernisasi platform, otomatisasi proses, dan integrasi arsitektur digital yang adaptif.</p>
+        </div>
+        <div class="bg-primary border border-slate-700 p-6 rounded-lg shadow-lg hover:scale-105 transition transform duration-300 animate-zoomIn">
+          <h3 class="text-lg font-semibold text-white mb-2">Keamanan & Ketahanan Digital</h3>
+          <p class="text-sm text-gray-400">Perlindungan menyeluruh terhadap risiko siber melalui pendekatan holistik dan teknologi terkini.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metodologi -->
+  <section id="process" class="max-w-6xl mx-auto px-6 py-24">
+    <h2 class="text-3xl font-bold text-accent mb-10">Metodologi Kolaboratif</h2>
+    <div class="grid md:grid-cols-2 gap-8 text-gray-300 text-lg">
+      <div class="space-y-3">
+        <p>✔ Eksplorasi & pemetaan kebutuhan klien</p>
+        <p>✔ Penyusunan visi & KPI digital</p>
+        <p>✔ Prototipe solusi dan pendekatan iteratif</p>
+        <p>✔ Implementasi dengan pendekatan agile</p>
+        <p>✔ Pemantauan, pelatihan, dan optimalisasi berkelanjutan</p>
+      </div>
+      <div class="bg-cover bg-center rounded-lg shadow-xl hidden md:block" style="background-image: url('https://images.unsplash.com/photo-1603791440384-56cd371ee9a7'); min-height: 300px;"></div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="contact" class="max-w-5xl mx-auto px-6 py-24 animate-fadeIn">
+    <h2 class="text-3xl font-bold text-accent mb-6">Hubungi Kami</h2>
+    <p class="text-lg mb-2 text-gray-300">📧 Email: <a href="mailto:sigmaboy@consulting.com" class="text-accent underline">sigmaboy@consulting.com</a></p>
+    <p class="text-lg text-gray-300">📍 Lokasi: Bandung Barat, Jawa Barat</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-600 text-center py-6">
+    <p class="text-sm">&copy; 2025 SIGMA BOY – Digital Strategy Consultant. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

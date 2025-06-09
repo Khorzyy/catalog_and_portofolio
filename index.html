@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gaybers - Shop</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+<div class="navbar">
+  <h4>Gay<span id="bers">bers</span>|</h4>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li>
+        <a href="sigma.html">
+          <button class="btn-company">> Perusahaan</button>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="assets/hiasan-dinding.jpeg" alt="Promo 1">
+      <div class="caption">Promo Diskon 50%!</div>
+    </div>
+    <div class="slide fade">
+      <img src="assets/rak-dinding-kardus.2.jpeg" alt="Promo 2">
+      <div class="caption">Produk Baru Telah Hadir</div>
+    </div>
+    <div class="slide fade">
+      <img src="assets/kera4.jfif" alt="Promo 2">
+      <div class="caption">Produk Baru Telah Hadir!</div>
+    </div>
+    <div class="slide fade">
+      <img src="assets/kera2.jfif" alt="Promo 2">
+      <div class="caption">Promo Diskon 40%</div>
+    </div>
+  </div>
+
+  <!-- Product Grid -->
+  <section class="product-grid">
+    <div class="card">
+      <img src="assets/rak-dinding-kardus.jpeg" alt="Rak Dinding Full Persegi" />
+      <div class="card-body">
+        <h3>Rak Dinding Full Persegi</h3>
+        <div class="harga">Rp.15.000</div>
+        <div class="stok">Stok tersedia: 3</div>
+        <button class="buy-btn">Beli Sekarang</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/rak-dinding-kardus.2.jpeg" alt="Rak Dinding Hexa" />
+      <div class="card-body">
+        <h3>Rak Dinding Hexa (Free Color)</h3>
+        <div class="harga">Rp.20.000</div>
+        <div class="stok">Stok tersedia: 5</div>
+        <button class="buy-btn">Beli Sekarang</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/rak-dinding-kardus.3.jpeg" alt="Rak Dinding Flat" />
+      <div class="card-body">
+        <h3>Rak Dinding Flat (Free Color)</h3>
+        <div class="harga">Rp.30.000</div>
+        <div class="stok">Stok tersedia: 20</div>
+        <button class="buy-btn">Beli Sekarang</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/hiasan-dinding.jpeg" alt="Pajangan Bulan" />
+      <div class="card-body">
+        <h3>Pajangan Dinding Bulan</h3>
+        <div class="harga">Rp.20.000</div>
+        <div class="stok">Stok tersedia: 0</div>
+        <button class="buy-btn" disabled>Stok Habis</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/hiasan-dinding2.jpeg" alt="Pajangan Hexa" />
+      <div class="card-body">
+        <h3>Pajangan Dinding Hexa</h3>
+        <div class="harga">Rp.30.000</div>
+        <div class="stok">Stok tersedia: 8</div>
+        <button class="buy-btn">Beli Sekarang</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/hiasan-dinding3.jpeg" alt="Pajangan Persegi" />
+      <div class="card-body">
+        <h3>Pajangan Dinding Persegi</h3>
+        <div class="harga">Rp.35.000</div>
+        <div class="stok">Stok tersedia: 10</div>
+        <button class="buy-btn">Beli Sekarang</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/kera2.jfif" alt="Pajangan Persegi" />
+      <div class="card-body">
+        <h3>Pajangan Dinding Persegi</h3>
+        <div class="harga">Rp.35.000</div>
+        <div class="stok">Stok tersedia: 10</div>
+        <button class="buy-btn">Beli Sekarang</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assets/kera4.jfif" alt="Pajangan Persegi" />
+      <div class="card-body">
+        <h3>Pajangan Dinding Persegi</h3>
+        <div class="harga">Rp.35.000</div>
+        <div class="stok">Stok tersedia: 10</div>
+        <button class="buy-btn">Beli Sekarang</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="Pencipta">
+    << &copy; <a href="#">Gay<span id="bers">bers</span></a> >>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    feather.replace();
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.querySelectorAll(".slide");
+      slides.forEach(slide => slide.style.display = "none");
+      slideIndex++;
+      if (slideIndex > slides.length) slideIndex = 1;
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+  </script>
+
+</body>
+</html>
