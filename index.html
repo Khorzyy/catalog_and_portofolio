@@ -17,20 +17,23 @@
 <body>
 
   <!-- Navigation Bar -->
-<div class="navbar">
-  <h4>Gay<span id="bers">bers</span>|</h4>
-  <nav>
-    <ul>
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-      <li>
-        <a href="sigma.html">
-          <button class="btn-company">> Perusahaan</button>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</div>
+  <div class="navbar">
+    <h4>Gay<span id="bers">bers</span>|</h4>
+    <div class="menu-toggle" id="menu-toggle">
+      <i data-feather="menu"></i>
+    </div>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li>
+          <a href="sigma.html">
+            <button class="btn-company">> Perusahaan</button>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
   <!-- Slideshow -->
   <div class="slideshow-container">
@@ -43,17 +46,18 @@
       <div class="caption">Produk Baru Telah Hadir</div>
     </div>
     <div class="slide fade">
-      <img src="assets/kera4.jfif" alt="Promo 2">
+      <img src="assets/kera4.jfif" alt="Promo 3">
       <div class="caption">Produk Baru Telah Hadir!</div>
     </div>
     <div class="slide fade">
-      <img src="assets/kera2.jfif" alt="Promo 2">
+      <img src="assets/kera2.jfif" alt="Promo 4">
       <div class="caption">Promo Diskon 40%</div>
     </div>
   </div>
 
   <!-- Product Grid -->
   <section class="product-grid">
+    <!-- Produk -->
     <div class="card">
       <img src="assets/rak-dinding-kardus.jpeg" alt="Rak Dinding Full Persegi" />
       <div class="card-body">
@@ -115,7 +119,7 @@
     </div>
 
     <div class="card">
-      <img src="assets/kera2.jfif" alt="Pajangan Persegi" />
+      <img src="assets/kera2.jfif" alt="Pajangan Kreatif Sedotan" />
       <div class="card-body">
         <h3>Pajangan Kreatif Sedotan</h3>
         <div class="harga">Rp.150.000</div>
@@ -125,7 +129,7 @@
     </div>
 
     <div class="card">
-      <img src="assets/kera4.jfif" alt="Pajangan Persegi" />
+      <img src="assets/kera4.jfif" alt="Pajangan Kreatif Sedotan" />
       <div class="card-body">
         <h3>Pajangan Kreatif Sedotan</h3>
         <div class="harga">Rp.100.000</div>
@@ -155,7 +159,15 @@
       slides[slideIndex - 1].style.display = "block";
       setTimeout(showSlides, 3000); // Change image every 3 seconds
     }
+
+    // Toggle responsive navbar
+    const toggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
   </script>
 
 </body>
-</html>
+  </html>
