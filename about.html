@@ -14,6 +14,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Custom About Styles -->
   <style>
     main {
       max-width: 800px;
@@ -28,7 +29,7 @@
       font-size: 2rem;
       font-weight: 600;
       margin-bottom: 1rem;
-      color: var(--primary, #b6895b);
+      color: #b6895b;
     }
 
     .about-description {
@@ -52,20 +53,18 @@
 <body>
 
   <!-- Navbar -->
-<div class="navbar">
-  <h4>Gay<span id="bers">bers</span>|</h4>
-  <nav>
-    <ul>
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="about.html">ABOUT</a></li>
-      <li>
-        <a href="sigma.html">
-          <button class="btn-company">> Perusahaan</button>
-        </a>
-      </li>
-    </ul>
-  </nav>
-</div>
+  <div class="navbar">
+    <h4 id="mk41">Gay<span id="bers">bers</span>|</h4>
+    <div class="menu-toggle" id="menu-toggle">
+      <i data-feather="menu"></i>
+    </div>
+    <nav id="nav">
+      <ul>
+        <li><a href="Catalog.html">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+      </ul>
+    </nav>
+  </div>
 
   <!-- Divider -->
   <hr id="header" />
@@ -96,8 +95,13 @@
   <!-- Scripts -->
   <script>
     feather.replace();
-  </script>
-  <script src="index.js"></script>
 
+    // Hamburger toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
