@@ -89,23 +89,25 @@ nav ul li a:hover {
 /* Slideshow */
 .slideshow-container {
   position: relative;
-  max-width: 1200px; /* Batasi max width */
   margin: 2rem auto;
   overflow: hidden;
-  width: 100%; /* Agar responsif */
+  width: 90%;
+  max-width: 1000px; /* batasi lebar maksimum di layar besar */
+  border-radius: 12px;
 }
 
 .slide {
   display: none;
-  width: 100%;
   position: relative;
+  width: 100%;
+  height: 400px; /* tinggi tetap untuk semua gambar */
 }
 
 .slide img {
-  width: 80%;
-  height: 200px; /* Tinggi mengikuti rasio gambar */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* jaga proporsi isi */
   border-radius: 12px;
-  object-fit: cover;
 }
 
 .caption {
