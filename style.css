@@ -102,7 +102,7 @@ nav ul li a:hover {
 }
 
 .slide img {
-  width: 100%;
+  width: 90%;
   height: auto; /* Tinggi mengikuti rasio gambar */
   border-radius: 12px;
   object-fit: cover;
