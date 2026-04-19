@@ -1,121 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <title>Developer Profile</title>
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
-
     body {
-      background: #0f172a;
-      color: #e2e8f0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #111;
       line-height: 1.6;
     }
 
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
     header {
-      padding: 80px 20px;
-      text-align: center;
-      background: #111827;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
     }
 
-    header h1 {
-      font-size: 40px;
-      color: #38bdf8;
+    h1 {
+      font-size: 28px;
+      margin: 0;
     }
 
-    header p {
-      margin-top: 10px;
-      color: #cbd5e1;
+    .role {
+      color: #555;
+      margin-top: 5px;
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
+      margin-bottom: 30px;
     }
 
     h2 {
-      margin-bottom: 20px;
-      color: #38bdf8;
-      border-left: 4px solid #38bdf8;
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-left: 3px solid #000;
       padding-left: 10px;
+    }
+
+    .item {
+      margin-bottom: 10px;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 20px;
     }
 
     .skills span {
       display: inline-block;
-      background: #1e293b;
-      padding: 8px 12px;
-      margin: 5px;
-      border-radius: 8px;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      background: #334155;
-    }
-
-    .contact a {
-      color: #38bdf8;
-      text-decoration: none;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      margin: 3px;
+      font-size: 13px;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
-      background: #111827;
-      margin-top: 40px;
-      color: #94a3b8;
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
+      font-size: 14px;
+      color: #555;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 28px;
-      }
+    a {
+      color: #000;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
+<div class="container">
+
+  <!-- HEADER -->
   <header>
-    <h1>Hi, I'm Khorzy 👋</h1>
-    <p>Frontend Developer | IoT Enthusiast | Backend Learner</p>
+    <h1>Khorzy</h1>
+    <div class="role">Full Stack Developer | IoT System Builder | Backend Enthusiast</div>
   </header>
 
   <!-- ABOUT -->
   <section>
-    <h2>About Me</h2>
+    <h2>About</h2>
     <p>
-      Saya seorang developer yang fokus di web development dan IoT (ESP32).
-      Saya suka membangun sistem seperti smart parking, MQTT, dan aplikasi backend.
-      Saat ini saya sedang belajar full-stack development dan sistem real-time.
+      Saya adalah developer yang fokus pada pengembangan sistem berbasis web dan IoT.
+      Saya terbiasa membangun sistem seperti smart parking, integrasi ESP32, MQTT, dan backend API.
+      Saat ini saya fokus meningkatkan kemampuan di backend dan sistem real-time.
     </p>
+  </section>
+
+  <!-- EXPERIENCE / PROJECT -->
+  <section>
+    <h2>Projects</h2>
+
+    <div class="item">
+      <div class="label">Smart Parking System</div>
+      <div>ESP32 + MQTT + Web Dashboard real-time untuk monitoring slot parkir.</div>
+    </div>
+
+    <div class="item">
+      <div class="label">RFID Gate System</div>
+      <div>Sistem akses pintu otomatis menggunakan RFID, servo, dan OLED display.</div>
+    </div>
+
+    <div class="item">
+      <div class="label">Admin Dashboard</div>
+      <div>CRUD user & tarif dengan sistem autentikasi JWT.</div>
+    </div>
+
   </section>
 
   <!-- SKILLS -->
   <section>
-    <h2>Skills</h2>
+    <h2>Technical Skills</h2>
     <div class="skills">
       <span>HTML</span>
       <span>CSS</span>
@@ -123,44 +131,34 @@
       <span>PHP</span>
       <span>Node.js</span>
       <span>MySQL</span>
-      <span>ESP32</span>
       <span>MQTT</span>
+      <span>ESP32</span>
+      <span>REST API</span>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- EDUCATION -->
   <section>
-    <h2>Projects</h2>
-    <div class="projects">
-
-      <div class="card">
-        <h3>Smart Parking System</h3>
-        <p>Sistem parkir berbasis ESP32 + MQTT + Web dashboard real-time.</p>
-      </div>
-
-      <div class="card">
-        <h3>Admin Dashboard</h3>
-        <p>Dashboard CRUD user + tarif dengan autentikasi JWT.</p>
-      </div>
-
-      <div class="card">
-        <h3>RFID Gate System</h3>
-        <p>Gate otomatis menggunakan RFID + servo + OLED display.</p>
-      </div>
-
+    <h2>Education</h2>
+    <div class="item">
+      <div class="label">SMK (Rekayasa Perangkat Lunak)</div>
+      <div>Fokus pada web development dan sistem embedded.</div>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section>
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:nandarizky52378@gmail.com">youremail@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Khorzyy" target="_blank">github.com/username</a></p>
+    <div>Email: yourmail@gmail.com</div>
+    <div>GitHub: <a href="https://github.com/username">github.com/username</a></div>
+    <div>Location: Batujajar, Jawa Barat, Indonesia</div>
   </section>
 
   <footer>
-    <p>© 2026 Khorzy. All rights reserved.</p>
+    <p>© 2026 - Developer Portfolio</p>
   </footer>
+
+</div>
 
 </body>
 </html>
