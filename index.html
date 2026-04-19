@@ -3,171 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gaybers - Shop</title>
+  <title>My Portfolio</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-  <!-- Feather Icons -->
-  <script src="https://unpkg.com/feather-icons"></script>
+    body {
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
 
-  <!-- Style -->
-  <link rel="stylesheet" href="style.css" />
+    header {
+      padding: 80px 20px;
+      text-align: center;
+      background: #111827;
+    }
+
+    header h1 {
+      font-size: 40px;
+      color: #38bdf8;
+    }
+
+    header p {
+      margin-top: 10px;
+      color: #cbd5e1;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #38bdf8;
+      border-left: 4px solid #38bdf8;
+      padding-left: 10px;
+    }
+
+    .skills span {
+      display: inline-block;
+      background: #1e293b;
+      padding: 8px 12px;
+      margin: 5px;
+      border-radius: 8px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #334155;
+    }
+
+    .contact a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111827;
+      margin-top: 40px;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- Navigation Bar -->
-  <div class="navbar">
-    <h4>Gay<span id="bers">bers</span>|</h4>
-    <div class="menu-toggle" id="menu-toggle">
-      <i data-feather="menu"></i>
-    </div>
-    <nav id="nav-menu">
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li>
-          <a href="sigma.html">
-            <button class="btn-company">> Perusahaan</button>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+  <!-- HERO -->
+  <header>
+    <h1>Hi, I'm Khorzy 👋</h1>
+    <p>Frontend Developer | IoT Enthusiast | Backend Learner</p>
+  </header>
 
-  <!-- Slideshow -->
-  <div class="slideshow-container">
-    <div class="slide fade">
-      <img src="assets/hiasan-dinding.jpeg" alt="Promo 1">
-      <div class="caption">Promo Diskon 50%!</div>
-    </div>
-    <div class="slide fade">
-      <img src="assets/rak-dinding-kardus.2.jpeg" alt="Promo 2">
-      <div class="caption">Produk Baru Telah Hadir</div>
-    </div>
-    <div class="slide fade">
-      <img src="assets/kera4.jfif" alt="Promo 3">
-      <div class="caption">Produk Baru Telah Hadir!</div>
-    </div>
-    <div class="slide fade">
-      <img src="assets/kera2.jfif" alt="Promo 4">
-      <div class="caption">Promo Diskon 40%</div>
-    </div>
-  </div>
+  <!-- ABOUT -->
+  <section>
+    <h2>About Me</h2>
+    <p>
+      Saya seorang developer yang fokus di web development dan IoT (ESP32).
+      Saya suka membangun sistem seperti smart parking, MQTT, dan aplikasi backend.
+      Saat ini saya sedang belajar full-stack development dan sistem real-time.
+    </p>
+  </section>
 
-  <!-- Product Grid -->
-  <section class="product-grid">
-    <!-- Produk -->
-    <div class="card">
-      <img src="assets/rak-dinding-kardus.jpeg" alt="Rak Dinding Full Persegi" />
-      <div class="card-body">
-        <h3>Rak Dinding Full Persegi</h3>
-        <div class="harga">Rp.15.000</div>
-        <div class="stok">Stok tersedia: 3</div>
-        <button class="buy-btn">Beli Sekarang</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets/rak-dinding-kardus.2.jpeg" alt="Rak Dinding Hexa" />
-      <div class="card-body">
-        <h3>Rak Dinding Hexa (Free Color)</h3>
-        <div class="harga">Rp.20.000</div>
-        <div class="stok">Stok tersedia: 5</div>
-        <button class="buy-btn">Beli Sekarang</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets/rak-dinding-kardus.3.jpeg" alt="Rak Dinding Flat" />
-      <div class="card-body">
-        <h3>Rak Dinding Flat (Free Color)</h3>
-        <div class="harga">Rp.30.000</div>
-        <div class="stok">Stok tersedia: 20</div>
-        <button class="buy-btn">Beli Sekarang</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets/hiasan-dinding.jpeg" alt="Pajangan Bulan" />
-      <div class="card-body">
-        <h3>Pajangan Dinding Bulan</h3>
-        <div class="harga">Rp.20.000</div>
-        <div class="stok">Stok tersedia: 0</div>
-        <button class="buy-btn" disabled>Stok Habis</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets/hiasan-dinding2.jpeg" alt="Pajangan Hexa" />
-      <div class="card-body">
-        <h3>Pajangan Dinding Hexa</h3>
-        <div class="harga">Rp.30.000</div>
-        <div class="stok">Stok tersedia: 8</div>
-        <button class="buy-btn">Beli Sekarang</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets/hiasan-dinding3.jpeg" alt="Pajangan Persegi" />
-      <div class="card-body">
-        <h3>Pajangan Dinding Persegi</h3>
-        <div class="harga">Rp.35.000</div>
-        <div class="stok">Stok tersedia: 10</div>
-        <button class="buy-btn">Beli Sekarang</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets/kera2.jfif" alt="Pajangan Kreatif Sedotan" />
-      <div class="card-body">
-        <h3>Pajangan Kreatif Sedotan</h3>
-        <div class="harga">Rp.150.000</div>
-        <div class="stok">Stok tersedia: 10</div>
-        <button class="buy-btn">Beli Sekarang</button>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="assets/kera4.jfif" alt="Pajangan Kreatif Sedotan" />
-      <div class="card-body">
-        <h3>Pajangan Kreatif Sedotan</h3>
-        <div class="harga">Rp.100.000</div>
-        <div class="stok">Stok tersedia: 10</div>
-        <button class="buy-btn">Beli Sekarang</button>
-      </div>
+  <!-- SKILLS -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>PHP</span>
+      <span>Node.js</span>
+      <span>MySQL</span>
+      <span>ESP32</span>
+      <span>MQTT</span>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="Pencipta">
-    << &copy; <a href="#">Gay<span id="bers">bers</span></a> >>
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <div class="card">
+        <h3>Smart Parking System</h3>
+        <p>Sistem parkir berbasis ESP32 + MQTT + Web dashboard real-time.</p>
+      </div>
+
+      <div class="card">
+        <h3>Admin Dashboard</h3>
+        <p>Dashboard CRUD user + tarif dengan autentikasi JWT.</p>
+      </div>
+
+      <div class="card">
+        <h3>RFID Gate System</h3>
+        <p>Gate otomatis menggunakan RFID + servo + OLED display.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:nandarizky52378@gmail.com">youremail@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/Khorzyy" target="_blank">github.com/username</a></p>
+  </section>
+
+  <footer>
+    <p>© 2026 Khorzy. All rights reserved.</p>
   </footer>
 
-  <!-- Scripts -->
-  <script>
-    feather.replace();
-
-    let slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      let slides = document.querySelectorAll(".slide");
-      slides.forEach(slide => slide.style.display = "none");
-      slideIndex++;
-      if (slideIndex > slides.length) slideIndex = 1;
-      slides[slideIndex - 1].style.display = "block";
-      setTimeout(showSlides, 3000); // Change image every 3 seconds
-    }
-
-    // Toggle responsive navbar
-    const toggle = document.getElementById("menu-toggle");
-    const navMenu = document.getElementById("nav-menu");
-
-    toggle.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-  </script>
-
 </body>
-  </html>
+</html>
